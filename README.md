@@ -1,4 +1,5 @@
 ![MIT](https://img.shields.io/badge/License-MIT-blue)
+
 # Character Builder
 
 ## Description
@@ -24,72 +25,75 @@ You may visit the deployed [website](?) to try it out for yourself!
   - [Tests](#tests)
   - [Questions](#questions)
   - [License](#license)
-  - [BONUS](#bonus)
 
 ## User Story
 
-~~~
-
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
-~~~
+```
+AS A user logged in to an RPG website
+I WANT to create a character and generate statistics
+SO THAT I can create or join a party with other characters
+```
 
 ## Acceptance Criteria
 
-~~~
-GIVEN a functional Express.js API
-~~~
+```
+GIVEN
+```
 
-- [x] WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-~~~
-THEN I am able to connect to a database using Sequelize
-~~~
+- [ ] WHEN
 
-- [x] WHEN I enter schema and seed commands
-~~~
-THEN a development database is created and is seeded with test data
-~~~
+```
+THEN
+```
 
-- [ ] WHEN I enter the command to invoke the application
-~~~
-THEN my server is started and the Sequelize models are synced to the MySQL database
-~~~
+- [ ] WHEN
 
-- [ ] WHEN I open API GET routes in Insomnia for categories, products, or tags
-~~~
-THEN the data for each of these routes is displayed in a formatted JSON
-~~~
+```
+THEN
+```
 
-- [ ] WHEN I test API POST, PUT, and DELETE routes in Insomnia
-~~~
-THEN I am able to successfully create, update, and delete data in my database
-~~~
+- [ ] WHEN
+
+```
+THEN
+```
+
+- [ ] WHEN
+
+```
+THEN
+```
+
+- [ ] WHEN
+
+```
+THEN
+```
 
 ## Mock-up
 
 The first animation shows GET routes to return all categories, all products, and all tags being tested in Insomnia:
-![mockup](./public/assets/images/get-routes.gif)
-
-The second animation shows GET routes to return a single category, a single product, and a single tag being tested in Insomnia:
-![mockup](./public/assets/images/get-id-routes.gif)
-
-The final animation shows the POST, PUT, and DELETE routes for categories being tested in Insomnia:
-![mockup](./public/assets/images/post-put-delete-routes.gif)
-
-Your walkthrough video should also show the POST, PUT, and DELETE routes for products and tags being tested in Insomnia.
+![mockup](./public/assets/images/image.png)
 
 ## Technologies
-| ID # | Technologies |
-| --- | --- |
-| 1 | Markdown |
-| 2 | JavaScript |
-| 3 | Node.js |
-| 4 | express package |
-| 6 | mysql2 package |
-| 7 | sequelize package |
-| 8 | dotenv package |
-| 9 | nodemon package |
+
+| ID # | Technologies                      |
+| ---- | --------------------------------- |
+| 1    | Markdown                          |
+| 2    | HTML                              |
+| 3    | CSS                               |
+| 4    | JavaScript                        |
+| 5    | Node.js                           |
+| 6    | express package                   |
+| 7    | express-handlebars package        |
+| 8    | express-session package           |
+| 9    | mysql2 package                    |
+| 10   | sequelize package                 |
+| 11   | connect-session-sequelize package |
+| 12   | dotenv package                    |
+| 13   | bcrypt package                    |
+| 14   | jest package                      |
+| 15   | tailwindcss package               |
 
 ## Installation
 
@@ -111,18 +115,32 @@ Test
 
 If you have any questions, you may direct them to VMLujanJr using the following links:
 
-| | Description |
-| --- | --- |
-| Name | Victor |
-| Occupation | Developer |
-| E-mail | <vmlujanjr@outlook.com> |
-| GitHub | <https://github.com/VMLujanJr/> |
+|            | Description                     |
+| ---------- | ------------------------------- |
+| Name       | Victor                          |
+| Occupation | Developer                       |
+| E-mail     | <vmlujanjr@outlook.com>         |
+| GitHub     | <https://github.com/VMLujanJr/> |
+
+|            | Description                    |
+| ---------- | ------------------------------ |
+| Name       | Keith                          |
+| Occupation | Developer                      |
+| E-mail     | <keithvip@gmail.com>           |
+| GitHub     | <https://github.com/KeithVIP/> |
+
+|            | Description                          |
+| ---------- | ------------------------------------ |
+| Name       | Michael R. Tulmen                    |
+| Occupation | Aspiring Software Developer          |
+| E-mail     | <michaeltulmen@gmail.com>            |
+| GitHub     | <https://github.com/Michael-Tulmen/> |
 
 ## License
 
 MIT License
 
-Copyright (c) 2022 VMLujanJr
+Copyright (c) 2022 VMLujanJr, Michael-Tulmen, KeithVIP
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -141,130 +159,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## BONUS
-~~~
-You’ll need to use the MySQL2 (Links to an external site.) and Sequelize (Links to an external site.) packages to connect your Express.js API to a MySQL database and the dotenv package (Links to an external site.) to use environment variables to store sensitive data, like your MySQL username, password, and database name.
-~~~
-
-DATA BASE MODELS
-Your database should contain the following four models, including the requirements listed for each model:
-~~~
-Category
-~~~
-~~~
-id
-~~~
-
-Integer
-
-Doesn't allow null values
-
-Set as primary key
-
-Uses auto increment
-
-- category_name
-
-String
-
-Doesn't allow null values
-
-- Product
-
-- id
-
-Integer
-
-Doesn't allow null values
-
-Set as primary key
-
-Uses auto increment
-
-- product_name
-
-String
-
-Doesn't allow null values
-
-- price
-
-Decimal
-
-Doesn't allow null values
-
-Validates that the value is a decimal
-
-- stock
-
-Integer
-
-Doesn't allow null values
-
-Set a default value of 10
-
-Validates that the value is numeric
-
-- category_id
-
-Integer
-
-References the category model's id
-
-- Tag
-
-- id
-
-Integer
-
-Doesn't allow null values
-
-Set as primary key
-
-Uses auto increment
-
-- tag_name
-
-String
-
-- ProductTag
-
-- id
-
-Integer
-
-Doesn't allow null values
-
-Set as primary key
-
-Uses auto increment
-
-- product_id
-
-Integer
-
-References the product model's id
-
-- tag_id
-
-Integer
-
-References the tag model's id
-~~~
-
-~~~
-Associations
-
-You'll need to execute association methods on your Sequelize models to create the following relationships between them:
-
-Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
-
-Category has many Product models.
-
-Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
-
-Tag belongs to many Product models.
-
-- Make sure you set up foreign key relationships that match the column we created in the respective models.
-~~~
