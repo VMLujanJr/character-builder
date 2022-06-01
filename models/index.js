@@ -32,6 +32,10 @@ Party.belongsTo(Character, {
     foreignKey: 'character_id'
 });
 
+Party.hasMany(Character, {
+    foreignKey: 'character_id'
+});
+
 User.hasMany(Party, {
     foreignKey: 'user_id'
 });
