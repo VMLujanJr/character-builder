@@ -1,6 +1,6 @@
 const Character = require('./Character');
 const Party = require('./Party');
-const Statistics = require('./Statistics');
+const Statistic = require('./Statistic');
 const User = require('./User');
 
 // create associations
@@ -12,52 +12,51 @@ Character.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-User.belongsToMany(Character, {
-    through: Party,
-    as: 'party_id',
-    foreignKey: 'user_id'
+/* One-to-one relationship; if problem, problem here... */
+Character.hasOne(Statistic, {
+    foreignKey: {
+        name: 'statistics_id'
+    }
 });
 
-Character.belongsToMany(User, {
-    through: Party,
-    as: 'party_id',
-    foreignKey: 'character_id'
+Statistic.belongsTo(Character, {
+    foreignKey: {
+        name: 'character_id'
+    }
 });
 
-Party.belongsTo(User, {
-    foreignKey: 'user_id'
-});
-
-Party.belongsTo(Character, {
-    foreignKey: 'character_id'
-});
+/* ugah bunga stops here */
 
 Party.hasMany(Character, {
-    foreignKey: 'character_id'
+    foreignKey: 'party_id'
 });
 
-User.hasMany(Party, {
-    foreignKey: 'user_id'
+Character.belongsTo(Party, {
+    foreignKey: 'party_id'
 });
 
-Character.hasMany(Party, {
-    foreignKey: 'character_id'
-});
+module.exports = { Character, Party, Statistic, User };
 
-Statistics.belongsTo(User, {
-    foreignKey: 'user_id'
-});
+/* 
+User is parent to Character,
+Character is child to User.
 
-Statistics.belongsTo(User, {
-    foreignKey: 'character_id'
-});
+Character is parent to Statistics,
+Statistics is child to Character.
 
-User.hasMany(Statistics, {
-    foreignKey: 'user_id'
-});
+Character hasOne Statistic,
+Statistic hasOne Character.
 
-Character.hasMany(Statistics, {
-    foreignKey: 'character_id'
-});
+Party is the parent to many Characters,
+Character is a child to Party.
 
-module.exports = { Character, Party, Statistics, User };
+Children ALWAYS reference the parent, NOT THE OTHER WAY AROUND.
+
+USER has many CHARACTERS
+CHARACTER belongs to one USER
+
+USER + CHARACTER = Many-to-One relationship.
+
+hasMany
+belongsTo
+*/
