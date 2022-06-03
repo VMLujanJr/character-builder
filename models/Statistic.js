@@ -54,21 +54,28 @@ Statistic.init(
         charisma: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 10,
             validate: {
                 isNumeric: true
+            }
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: "user",
+                key: "id",
             }
         },
         character_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'character',
-                key: 'id'
+                model: "character",
+                key: "id",
             }
         }
     },
     {
         sequelize,
-        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'statistic',

@@ -13,16 +13,16 @@ Character.init(
         },
         character_name: {
             type: DataTypes.STRING(30),
-            allowNull: false,
+            allowNull: true,
             unique: true,
         },
         race: {
             type: DataTypes.STRING(30),
-            allowNull: false,
+            allowNull: true,
         },
         statistic_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             references: {
                 model: 'statistic',
                 key: 'id'
@@ -30,7 +30,7 @@ Character.init(
         },
         party_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             references: {
                 model: 'party',
                 key: 'id',
@@ -38,7 +38,7 @@ Character.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             references: {
                 model: 'user',
                 key: 'id',

@@ -1,42 +1,3 @@
-const Character = require('./Character');
-const Party = require('./Party');
-const Statistic = require('./Statistic');
-const User = require('./User');
-
-// create associations
-User.hasMany(Character, {
-    foreignKey: 'user_id'
-});
-
-Character.belongsTo(User, {
-    foreignKey: 'user_id'
-});
-
-/* One-to-one relationship; if problem, problem here... */
-Character.hasOne(Statistic, {
-    foreignKey: {
-        name: 'statistics_id'
-    }
-});
-
-Statistic.belongsTo(Character, {
-    foreignKey: {
-        name: 'character_id'
-    }
-});
-
-/* ugah bunga stops here */
-
-Party.hasMany(Character, {
-    foreignKey: 'party_id'
-});
-
-Character.belongsTo(Party, {
-    foreignKey: 'party_id'
-});
-
-module.exports = { Character, Party, Statistic, User };
-
 /* 
 User is parent to Character,
 Character is child to User.
@@ -45,7 +6,6 @@ Character is parent to Statistics,
 Statistics is child to Character.
 
 Character hasOne Statistic,
-Statistic hasOne Character.
 
 Party is the parent to many Characters,
 Character is a child to Party.
@@ -60,3 +20,39 @@ USER + CHARACTER = Many-to-One relationship.
 hasMany
 belongsTo
 */
+const User = require('./User');
+const Character = require('./Character');
+const Statistic = require('./Statistic');
+const Party = require('./Party');
+
+
+
+// create associations
+User.hasMany(Character, {
+    foreignKey: "user_id",
+});
+
+Character.belongsTo(User, {
+    foreignKey: "user_id",
+});
+
+Character.hasOne(Statistic, {
+    foreignKey: "statistic_id",
+});
+
+Statistic.belongsTo(Character, {
+    foreignKey: "character_id",
+});
+
+/* ugah bunga stops here */
+
+Party.hasMany(Character, {
+    foreignKey: 'party_id',
+});
+
+Character.belongsTo(Party, {
+    foreignKey: 'party_id',
+});
+
+module.exports = { User, Character, Statistic, Party };
+
