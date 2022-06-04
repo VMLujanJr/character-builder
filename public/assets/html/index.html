@@ -10,52 +10,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div>
-        <header class="flex flex-wrap p-3 sedgewick">
-            <h1 class="w-2/3">
-                <a class="text-5xl" href="/">Slayers Online</a>
-            </h1>
-            <nav class="flex justify-end w-1/3 gap-1">
-                <a class="text-2xl" href="/portal">portal</a>
-                <button class="text-2xl" id="logout">logout</button>
-                <a class="text-2xl" href="/login">login</a>
-            </nav>
-        </header>
-        <main class="h-screen cardo text-2xl text-slate-100">
-            <!-- [ CONTENT ] -->
+<body class="flex flex-col">
+    <header class="flex flex-wrap p-3 sedgewick bg-slate-900 text-slate-100">
+        <!-- [ CONTENT ] -->
+<!--         <div class="bg-blue-500">
+            <img class="w-full" src="/public/assets/images/silkroad.jpg" alt="swordswoman" />
+        </div> -->
+        <h1 class="w-2/3">
+            <a class="text-6xl hover:text-red-500" href="/">S</a>
+        </h1>
+        <nav class="flex justify-end w-1/3 gap-1 items-center text-yellow-400">
+            <a class="text-2xl" href="/portal">portal</a>
+            <button class="text-2xl" id="logout">logout</button>
+            <a class="text-2xl" href="/login">login</a>
+        </nav>
+    </header>
+    <main class="flex flex-col h-full cardo text-2xl">
+        <section class="flex flex-col items-center">
+
+            <section class="w-full sedgewick text-center my-5">
+                <h2 class="text-6xl my-2 p-2">Slayers</h2>
+                <img class="w-full h-36 bg-center bg-cover no-repeat" style="background-image: url(/public/assets/images/banner.jpg);">
+                </img>
+                <h2 class="text-4xl sedgewick">A WORLD OF SWORDS & MAGIC</h2>
+            </section>
+
+                    <!-- [ SIGN-UP LINK ] -->
+        <section class="text-center w-full py-36 bg-no-repeat" style="background-image: url(/public/assets/images/characterset.jpg);">
+            <a class="text-slate-100 bg-red-500 border-2 border-slate-900 outline outline-pink-500/50 text-2xl p-2 rounded-md hover:outline-blue-500/50" href="/sign-up">sign-up</a>
+        </section>
 
             <!-- [ SIGN-UP FORM ] -->
-            <section class="relative">
-                <div>
-                    <img class="w-full" src="/public/assets/images/silkroad.jpg" alt="swordswoman">
+<!--             <form class="flex flex-col drop-shadow-lg bg-slate-900 gap-1 m-5 p-1 rounded-md w-2/3 items-center" id="sign-up">
+                <h2 class="font-bold border-b-2 border-slate-50 text-2xl text-center text-slate-100">Sign-Up</h2>
+                <div class="flex flex-col w-3/4">
+                    <label class="text-slate-100" for="signup-username">Username:</label>
+                    <input class="rounded-md" placeholder=" username" type="text" name="signup-username" id="signup-username" />
                 </div>
-                <form class="flex flex-col items-center gap-1 bg-slate-800 m-2 w-1/3 absolute bottom-0" id="sign-up">
-                    <div class="flex flex-col min-w-fit w-1/2">
-                        <label class="" for="signup-username">Username:</label>
-                        <input placeholder=" username" type="text" name="signup-username" id="signup-username" />
-                    </div>
-                    <div class="flex flex-col w-1/2">
-                        <label for="signup-email">E-mail:</label>
-                        <input placeholder=" email" type="text" name="signup-email" id="signup-email" />
-                    </div>
-                    <div class="flex flex-col w-1/2">
-                        <label for="signup-password">Password:</label>
-                        <input placeholder=" password" type="password" name="signup-password" id="signup-password" />
-                    </div>
-                    <button class="bg-red-600 rounded-md p-1 m-2" type="submit">sign up</button>
-                </form>
-            </section>
+                <div class="flex flex-col w-3/4">
+                    <label class="text-slate-100" for="signup-email">E-mail:</label>
+                    <input class="rounded-md" placeholder=" email" type="text" name="signup-email" id="signup-email" />
+                </div>
+                <div class="flex flex-col w-3/4">
+                    <label class="text-slate-100" for="signup-password">Password:</label>
+                    <input class="rounded-md" placeholder=" password" type="password" name="signup-password" id="signup-password" />
+                </div>
+                <button class="bg-red-600 rounded-md p-1 m-2 w-3/4" type="submit">sign up</button>
+            </form> -->
+        </section>
 
-            <section>
-                <form>
+        <section class="flex flex-col justify-center">
+            <!-- [ WELCOME ] -->
+            <div class="text-center">
+                <h2 class="sedgewick text-4xl border-b-2 m-2">What is Slayers?</h2>
+                <p><span class="italic">Slayers</span> is an online tabletop roleplaying game platform where all your fantasies will come true.</p>
+            </div>
+            <div class="text-center">
+                <h2 class="sedgewick text-4xl border-b-2 m-2">How do I start?</h2>
+                <p>
+                    Sign up to create a unique account. With an account at the ready, you can login to your <span class="italic">Portal</span>.
+                </p>
+            </div>
+            <div class="text-center">
+                <h2 class="sedgewick text-4xl border-b-2 m-2">What is the Portal?</h2>
+                <p>
+                    The <span class="italic">Portal</span> alllows you to create a unique character and establish a party where other characters can join!
+                </p>
+            </div>
+        </section>
 
-                </form>
-            </section>
-        </main>
-        <footer>
-            &copy; <!-- `${new Date().fullYear()}` --> All rights reserved.
-        </footer>
-    </div>
+    </main>
+    <footer class="flex flex-col bg-slate-900 text-slate-100 p-4">
+        <section class="flex">
+            <h2 class="flex justify-start sedgewick w-2/4">
+                <a class="text-6xl hover:text-red-500" href="https://github.com/VMLujanJr/character-builder" target="_blank">GitHub</a>
+            </h2>
+            <h2 class="flex justify-end sedgewick w-2/4">
+                <a class="text-6xl hover:text-red-500" href="/">S</a>
+            </h2>
+        </section>
+        &copy; <!-- `${new Date().fullYear()}` --> All rights reserved.
+    </footer>
 </body>
 </html>
