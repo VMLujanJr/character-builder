@@ -161,3 +161,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/html/output.css --watch
+
+test
