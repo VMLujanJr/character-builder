@@ -4,7 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
-class Statistic extends Model { }
+class Statistic extends Model {}
 
 // set up fields and rules for Product model
 Statistic.init(
@@ -59,20 +59,6 @@ Statistic.init(
                 isNumeric: true
             }
         }
-/*         user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "user",
-                key: "id",
-            }
-        },
-        character_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "character",
-                key: "id",
-            }
-        } */
     },
     {
         sequelize,

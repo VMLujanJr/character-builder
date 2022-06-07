@@ -15,11 +15,11 @@ const seedAll = async () => {
   await seedUsers();
   console.log("\n----- USERS SEEDED -----\n");
 
-  await seedStatistics();
-  console.log("\n----- STATISTICS SEEDED -----\n");
-
   await seedParties();
   console.log("\n----- PARTIES SEEDED -----\n");
+
+  await seedStatistics();
+  console.log("\n----- STATISTICS SEEDED -----\n");
 
   await seedCharacters();
   console.log("\n----- CHARACTERS SEEDED -----\n");
