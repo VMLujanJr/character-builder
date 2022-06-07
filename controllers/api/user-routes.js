@@ -1,20 +1,20 @@
 const router = require("express").Router();
 const { User, Character, Party } = require("../../models");
 
-// GET ALL USERS
+// (GET ALL) /api/users
 router.get("/", (req, res) => {
   User.findAll({
     attributes: { exclude: ["password"] },
   })
-    .then((dbUserData) => res.json(dbUserData))
-    .catch((err) => {
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
 //GET by User ID
-router.get("/:id", (req, res) => {
+/* router.get("/:id", (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
     where: {
@@ -130,6 +130,6 @@ router.delete("/:id", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
+}); */
 
 module.exports = router;

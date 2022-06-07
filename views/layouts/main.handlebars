@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal RPG | Homepage</title>
+    <link rel="stylesheet" href="./output.css"/>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col h-screen">
+    <header class="flex flex-wrap p-3 sedgewick bg-slate-900 text-slate-100">
+        <!-- [ CONTENT ] -->
+<!--         <div class="bg-blue-500">
+            <img class="w-full" src="/public/assets/images/silkroad.jpg" alt="swordswoman" />
+        </div> -->
+        <h1 class="w-2/3">
+            <a class="text-6xl hover:text-red-500" href="/">S</a>
+        </h1>
+        <nav class="flex justify-end w-1/3 gap-1 items-center text-yellow-400">
+            <a class="text-2xl" href="/portal">portal</a>
+            <button class="text-2xl" id="logout">logout</button>
+            <a class="text-2xl" href="/login">login</a>
+        </nav>
+    </header>
+    <main class="flex flex-col cardo text-2xl bg-slate-400">
+        <section class="flex justify-end">
+            <audio controls autoplay="1" muted="1" loop>
+                <source src="/public/assets/audio/blood.mp3" type="audio/mpeg" />
+            </audio>
+        </section>
+        <section class="flex flex-col items-center">
+            <section class="w-full sedgewick text-center my-5">
+                <h2 class="text-6xl my-2 p-2">Slayers</h2>
+                <img class="w-full h-36 bg-center bg-cover no-repeat" style="background-image: url(/public/assets/images/banner.jpg);">
+                </img>
+                <h2 class="text-4xl sedgewick">A WORLD OF SWORDS & MAGIC</h2>
+            </section>
+
+            <!-- [ SIGN-UP LINK ] -->
+            <section class="text-center w-full py-36 bg-no-repeat" style="background-image: url(/public/assets/images/characterset.jpg);">
+                <a class="text-slate-100 bg-red-500 border-2 border-slate-900 outline outline-pink-500/50 text-2xl p-2 rounded-md hover:outline-blue-500/50" href="/sign-up">sign-up</a>
+            </section>
+        </section>
+
+        <!-- [ FAQ ] -->
+        <section class="flex flex-col bg-slate-500 items-center">
+            <div class="text-center w-96 my-5">
+                <h2 class="sedgewick text-4xl border-b-2 m-2">What is Slayers?</h2>
+                <p><span class="italic">Slayers</span> is an online tabletop roleplaying game platform where all your fantasies will come true.</p>
+            </div>
+            <div class="text-center w-96 my-5">
+                <h2 class="sedgewick text-4xl border-b-2 m-2">How do I start?</h2>
+                <p>
+                    Sign up to create a unique account. With an account at the ready, you can login to your <span class="italic">Portal</span>.
+                </p>
+            </div>
+            <div class="text-center w-96 my-5">
+                <h2 class="sedgewick text-4xl border-b-2 m-2">What is the Portal?</h2>
+                <p>
+                    The <span class="italic">Portal</span> alllows you to create a unique character and establish a party where other characters can join!
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="flex flex-col bg-slate-900 text-slate-100 p-4">
+        <section class="flex items-center">
+            <h2 class="flex justify-start w-2/4">
+                <a class="text-2xl hover:text-red-500" href="https://github.com/VMLujanJr/character-builder" target="_blank">github</a>
+            </h2>
+            <h2 class="flex justify-end sedgewick w-2/4">
+                <a class="text-6xl hover:text-red-500" href="/">S</a>
+            </h2>
+        </section>
+        <div class="text-center">
+            &copy; <!-- `${new Date().fullYear()}` --> All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
