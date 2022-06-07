@@ -8,9 +8,7 @@ const statisticData = [
         constitution: 10,
         intelligence: 10,
         wisdom: 10,
-        charisma: 10,
-        user_id: 1,
-        character_id: 1,
+        charisma: 10
     },
 ];
 

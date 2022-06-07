@@ -58,8 +58,8 @@ Statistic.init(
             validate: {
                 isNumeric: true
             }
-        },
-        user_id: {
+        }
+/*         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: "user",
@@ -72,7 +72,7 @@ Statistic.init(
                 model: "character",
                 key: "id",
             }
-        }
+        } */
     },
     {
         sequelize,

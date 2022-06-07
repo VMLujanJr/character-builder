@@ -1,7 +1,7 @@
 const User = require("./User");
-const Character = require("./Character");
-const Statistic = require("./Statistic");
 const Party = require("./Party");
+const Statistic = require("./Statistic");
+const Character = require("./Character");
 
 // create associations
 User.hasMany(Character, {
@@ -13,6 +13,70 @@ Character.belongsTo(User, {
 });
 
 Character.hasOne(Statistic, {
+  foreignKey: 'statistic_id'
+});
+
+Statistic.belongsTo(Character, {
+  // empty
+});
+
+Party.hasMany(Character, {
+  foreignKey: 'party_id'
+});
+
+Character.belongsTo(Party, {
+  foreignKey: 'party_id'
+});
+
+/* Character.belongsToMany(User {
+  through: Statistic,
+  as: "character_stats",
+  foreignKey: "character_id"
+}); */
+
+
+
+// reference
+/* User.belongsToMany(Post, {
+  through: Vote,
+  as: 'voted_posts',
+  foreignKey: 'user_id'
+});
+
+Post.belongsToMany(User, {
+  through: Vote,
+  as: 'voted_posts',
+  foreignKey: 'post_id'
+}); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Character.hasOne(Statistic, {
   foreignKey: "statistic_id",
 });
 
@@ -30,12 +94,12 @@ User.hasMany(Statistic, {
 
 /* ugah bunga stops here */
 
-Party.hasMany(Character, {
+/* Party.hasMany(Character, {
   foreignKey: "party_id",
 });
 
 Character.belongsTo(Party, {
   foreignKey: "party_id",
-});
+}); */
 
 module.exports = { User, Character, Statistic, Party };
