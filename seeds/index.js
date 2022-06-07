@@ -11,18 +11,18 @@ const sequelize = require('../config/connection.js');
 const seedAll = async () => {
     await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
-    await seedStatistics();
-    console.log('\n----- STATISTICS SEEDED -----\n');
+
     await seedUsers();
     console.log('\n----- USERS SEEDED -----\n');
 
     await seedCharacters();
     console.log('\n----- CHARACTERS SEEDED -----\n');
 
+    await seedStatistics();
+    console.log('\n----- STATISTICS SEEDED -----\n');
+
     await seedParties();
     console.log('\n----- PARTIES SEEDED -----\n');
-
-
 
     process.exit(0);
 };
