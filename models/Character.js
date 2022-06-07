@@ -49,7 +49,7 @@ Character.init(
         sequelize,
         freezeTableName: false,
         underscored: true,
-        modelName: 'toon',
+        modelName: 'player_character',
     }
 );
 

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Character, Party } = require("../../models");
+const { User, Character } = require("../../models");
 
 // (GET ALL) /api/users
 router.get("/", (req, res) => {
@@ -13,12 +13,12 @@ router.get("/", (req, res) => {
     });
 });
 
-//GET by User ID
-/* router.get("/:id", (req, res) => {
+// (GET USER BY ID) /api/users/:id
+router.get("/:id", (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
     where: {
-      id: req.params.id,
+      id: req.params.id
     },
     include: [
       {
@@ -28,16 +28,8 @@ router.get("/", (req, res) => {
           "character_name",
           "race",
           "statistic_id",
-          "party_id",
+          "party_id"
         ],
-      },
-      {
-        model: Party,
-        attributes: ["id", "party_name"],
-        include: {
-          model: Character,
-          attributes: ["character_name"],
-        },
       },
     ],
   })
@@ -56,7 +48,7 @@ router.get("/", (req, res) => {
     });
 });
 
-//POST USER
+// (POST USER) /api/users/
 router.post("/", (req, res) => {
   User.create({
     username: req.body.username,
@@ -91,7 +83,7 @@ router.post("/login", (req, res) => {
   });
 });
 
-//PUT Request, for updating user data
+// (PUT USER BY ID) /api/users/
 router.put("/:id", (req, res) => {
   User.update(req.body, {
     individualHooks: true,
@@ -130,6 +122,5 @@ router.delete("/:id", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-}); */
-
+});
 module.exports = router;
