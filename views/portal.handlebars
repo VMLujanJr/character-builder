@@ -1,0 +1,156 @@
+{{!-- PORTAL PAGE --}}
+
+<!-- [ CHARACTER CREATION IMAGE ] -->
+<div class="flex justify-end" id="content">
+    <img class="w-80" src="/public/assets/images/silkroad_4.png" alt="swordswoman">
+</div>
+<!-- [ CHARACTER CONTENT ] -->
+<section class="flex">
+    <!-- [ CREATE A CHARACTER ] -->
+    <div class="w-1/2">
+        <h2 class="flex justify-center sedgewick text-3xl">Create Character</h2>
+        <form class="flex flex-col items-center gap-1">
+            <div>
+                <!-- <label for="char_name">Character Name:</label> -->
+                <input class="font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="Character Name" name="char_name" id="char_name" />
+            </div>
+            <div>
+                <!-- <label for="char_str">Strength:</label> -->
+                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="STR" name="char_str" id="char_str" />
+            </div>
+            <div>
+                <!-- <label for="char_dex">Dexterity:</label> -->
+                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="DEX" name="char_dex" id="char_dex" />
+            </div>
+            <div>
+                <!--  <label for="char_con">Constitution:</label> -->
+                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="CON" name="char_con" id="char_con" />
+            </div>
+            <div>
+                <!-- <label for="char_int">Intelligence:</label> -->
+                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="INT" name="char_dex" id="char_dex" />
+            </div>
+            <div>
+                <!-- <label for="char_wis">Wisdom:</label> -->
+                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="WIS" name="char_wis" id="char_wis" />
+            </div>
+            <div>
+                <!-- <label for="char_cha">Charisma:</label> -->
+                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="CHA" name="char_cha" id="char_cha" />
+            </div>
+            <button class="w-28 font-bold text-center outline outline-offset-2 outline-3 rounded-full mt-4" type="submit">CREATE</button>
+        </form>
+    </div>
+    
+    <!-- [ LIST OF CHARACTERS ] -->
+    <div class="w-1/2">
+        <h2 class="flex justify-center sedgewick text-3xl">Characters</h2>
+        <ol class="flex flex-col items-center gap-1">
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 1</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 2</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 3</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 4</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 5</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 6</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 7</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 8</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 9</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Character 10</p>
+                <button class="w-1/4" type="button">edit</button>
+                <button class="w-1/4" type="button">delete</button>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- [ PARTY CREATION IMAGE ] -->
+<div class="flex justify-center" id="content">
+    <img class="w-80" src="/public/assets/images/dnd_1.png" alt="swordswoman">
+</div>
+
+<!-- [ PARTY CONTENT ] -->
+<section class="flex">
+    <!-- [ CREATE PARTY] -->
+    <div class="flex flex-col w-1/2 items-center gap-1">
+        <h2 class="sedgewick text-3xl">Create Party</h2>
+        <form class="flex flex-col">
+            <div>
+                <!-- <label for="party-name">Party Name:</label> -->
+                <input class="w-32 text-center" placeholder="Party Name" name="party-name" id="party-name" />
+            </div>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+    <!-- [ SEARCH FOR PARTY BY ID ] -->
+    <div class="flex flex-col w-1/2 items-center gap-1">
+        <h2 class="sedgewick text-center text-2xl">Search for Party by ID</h2>
+        <form class="flex flex-col">
+            <div class="w-3/4">
+                <!-- <label for="party-search-by-id">Party Search:</label> -->
+                <input class="text-center outline-" placeholder="Enter Party ID" name="party-search-by-id" id="party-search-by-id" />
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <!-- [ SEARCH FOR ALL ACTIVE PARTIES ] -->
+    <div>
+        <h2 class="sedgewick text-center text-3xl">Search for All Active Parties</h2>
+        <ol class="flex flex-col w-full items-center">
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Party 1</p>
+                <button class="w-1/4" type="button">join</button>
+                <button class="w-1/4" type="button">leave</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Party 2</p>
+                <button class="w-1/4" type="button">join</button>
+                <button class="w-1/4" type="button">leave</button>
+            </li>
+            <li class="flex w-full text-center">
+                <p class="w-2/4">Party 3</p>
+                <button class="w-1/4" type="button">join</button>
+                <button class="w-1/4" type="button">leave</button>
+            </li>
+        </ol>
+    </div>
+</section>

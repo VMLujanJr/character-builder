@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Statistic } = require("../../models");
 
+// (GET ALL) /api/statistics
 router.get("/", (req, res) => {
   Statistic.findAll()
     .then((dbStatisticData) => res.json(dbStatisticData))
@@ -10,6 +11,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// (GET STATISTICS BY ID) /api/statistics:id
 router.get("/:id", (req, res) => {
   Statistic.findOne({
     where: {
@@ -38,6 +40,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// (POST ALL) /api/statistics
 router.post("/", (req, res) => {
   Statistic.create({
     id: req.body.id,
@@ -55,6 +58,7 @@ router.post("/", (req, res) => {
     });
 });
 
+// (PUT STATISTICS BY ID) /api/statistics:/id
 router.put("/:id", (req, res) => {
   Statistic.update(
     {
@@ -85,6 +89,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
+// (DELETE STATISTICS BY ID) /api/statistics:/id
 router.delete("/:id", (req, res) => {
   Statistic.destroy({
     where: {

@@ -1,0 +1,33 @@
+{{!-- SIGN-UP PAGE --}}
+
+<section class="flex justify-end">
+    <audio controls autoplay="1" muted="1" loop>
+        <source src="/public/assets/audio/blood.mp3" type="audio/mpeg" />
+    </audio>
+</section>
+<section class="flex flex-col items-center">
+    <section class="w-1/2 sedgewick text-center my-5">
+        <h2 class="text-6xl my-2 p-2">Sign-up</h2>
+        <p class="cardo">To get started, you must sign-up to create a unique account.</p>
+    </section>
+
+    <!-- [ SIGN-UP FORM ] -->
+    <form class="flex flex-col drop-shadow-lg bg-slate-900 gap-1 m-5 p-1 rounded-md w-2/3 items-center" id="sign-up">
+        <div class="flex flex-col w-3/4">
+            <label class="text-slate-100" for="signup-username">Username:</label>
+            <input class="rounded-md" placeholder=" username" type="text" name="signup-username" id="signup-username" />
+        </div>
+        <div class="flex flex-col w-3/4">
+            <label class="text-slate-100" for="signup-email">E-mail:</label>
+            <input class="rounded-md" placeholder=" email" type="text" name="signup-email" id="signup-email" />
+        </div>
+        <div class="flex flex-col w-3/4">
+            <label class="text-slate-100" for="signup-password">Password:</label>
+            <input class="rounded-md" placeholder=" password" type="password" name="signup-password" id="signup-password" />
+        </div>
+        <div class="text-slate-100 text-sm w-3/4">
+            <p>By signing up, you are automatically subcribed to receive future news, updates, and general information about the game via email. You may unsubcribe at any time in the Portal settings.</p>
+        </div>
+        <button class="bg-red-600 rounded-md p-1 m-2 w-3/4" type="submit">sign up</button>
+    </form>
+</section>

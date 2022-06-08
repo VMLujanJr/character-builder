@@ -12,13 +12,13 @@ Character.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-/* Character.hasOne(Statistic, {
-  /* foreignKey: 'statistic_id'
-}); */
+Character.hasOne(Statistic, {
+  foreignKey: 'statistic_id'
+});
 
-/* Statistic.belongsTo(Character, {
-  // empty
-}); */
+Statistic.belongsTo(Character, {
+  foreignKey: 'statistic_id'
+});
 
 Party.hasMany(Character, {
   foreignKey: 'party_id'
