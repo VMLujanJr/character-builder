@@ -48,7 +48,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// (POST USER) /api/users/
+// (POST ALL) /api/users/
 router.post("/", (req, res) => {
   User.create({
     username: req.body.username,
@@ -62,6 +62,7 @@ router.post("/", (req, res) => {
     });
 });
 
+// (POST LOGIN) /api/users/login
 router.post("/login", (req, res) => {
   User.findOne({
     where: {
@@ -83,7 +84,7 @@ router.post("/login", (req, res) => {
   });
 });
 
-// (PUT USER BY ID) /api/users/
+// (PUT USER BY ID) /api/users/:id
 router.put("/:id", (req, res) => {
   User.update(req.body, {
     individualHooks: true,
@@ -104,7 +105,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-//DELETE ROUTE TO DELETE A USER
+// (DELETE USER BY ID) /api/users/:id
 router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
