@@ -5,67 +5,43 @@ const characterData = [
     {
         id: 1,
         character_name: 'Victor',
-        race: 'Elf',
-        statistic_id: 1,
-        party_id: 1,
-        user_id: 1
+        race: 'Elf'
     },
     {
         id: 2,
         character_name: 'Michael',
-        race: 'Mage',
-        statistic_id: 1,
-        party_id: 2,
-        user_id: 2
+        race: 'Mage'
     },
     {
         id: 3,
         character_name: 'Keith',
-        race: 'Warlock',
-        statistic_id: 1,
-        party_id: 3,
-        user_id: 3
+        race: 'Warlock'
     },
     {
         id: 4,
         character_name: 'Barney',
-        race: 'Dinosaur',
-        statistic_id: 1,
-        party_id: 4,
-        user_id: 4
+        race: 'Dinosaur'
     },
     {
 
         id: 5,
         character_name: 'Leroy',
-        race: 'Dwarf',
-        statistic_id: 1,
-        party_id: 5,
-        user_id: 5
+        race: 'Dwarf'
     },
     {
         id: 6,
         character_name: 'Elly',
-        race: 'Nord',
-        statistic_id: 1,
-        party_id: 6,
-        user_id: 6
+        race: 'Nord'
     },
     {
         id: 7,
         character_name: 'Tim',
-        race: 'Human',
-        party_id: 7,
-        statistic_id: 1,
-        user_id: 7
+        race: 'Human'
     },
     {
         id: 8,
         character_name: 'Larlac',
-        race: 'Lizardfolk',
-        statistic_id: 1,
-        party_id: 8,
-        user_id: 8
+        race: 'Lizardfolk'
     },
 ];
 

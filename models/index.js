@@ -2,6 +2,7 @@ const User = require("./User");
 const Party = require("./Party");
 const Statistic = require("./Statistic");
 const Character = require("./Character");
+const Char_Stats = require("./CharacterStats");
 
 // create associations
 User.hasMany(Character, {
@@ -13,12 +14,21 @@ Character.belongsTo(User, {
 });
 
 Character.hasOne(Statistic, {
-  foreignKey: 'statistic_id'
+  through: Char_Stats,
+  foreignKey: 'character_id'
+});
+Statistic.belongsTo(Character);
+
+/* Character.hasOne(Statistic, {
+  foreignKey: {
+    allowNull: false
+  },
+  foreignKey: "statistic_id"
 });
 
 Statistic.belongsTo(Character, {
-  foreignKey: 'statistic_id'
-});
+  /* foreignKey: 'statistic_id'
+}); */
 
 Party.hasMany(Character, {
   foreignKey: 'party_id'

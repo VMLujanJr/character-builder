@@ -19,35 +19,11 @@ Character.init(
         race: {
             type: DataTypes.STRING(30),
             allowNull: false,
-        },
-        statistic_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'statistic',
-                key: 'id'
-            }
-        },
-        party_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'party',
-                key: 'id',
-            },
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'user',
-                key: 'id',
-            },
         }
     },
     {
         sequelize,
-        freezeTableName: false,
+        freezeTableName: true,
         underscored: true,
         modelName: 'player_character',
     }
