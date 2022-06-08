@@ -11,24 +11,19 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  User.findOne({
+  Statistic.findOne({
     where: {
-      id: req.params.id,
+      id: req.params.id
     },
-    include: [
-      {
-        model: Statistic,
-        attributes: [
-          "id",
-          "strength",
-          "dexterity",
-          "constitution",
-          "intelligence",
-          "wisdom",
-          "charisma",
-        ],
-      },
-    ],
+    attributes: [
+        "id",
+        "strength",
+        "dexterity",
+        "constitution",
+        "intelligence",
+        "wisdom",
+        "charisma"
+    ]
   })
     .then((dbStatisticData) => {
       if (!dbStatisticData) {
@@ -61,11 +56,22 @@ router.post("/", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  Statistic.update({
-    where: {
-      id: req.params.id,
+  Statistic.update(
+    {
+      id: req.body.id,
+      strength: req.body.strength,
+      dexterity: req.body.dexterity,
+      constitution: req.body.constitution,
+      intelligence: req.body.intelligence,
+      wisdom: req.body.wisdom,
+      charisma: req.body.charisma,
     },
-  })
+    {
+        where: {
+            id: req.body.id,
+        }
+    }
+  )
     .then((dbStatisticData) => {
       if (!dbStatisticData) {
         res.status(404).json({ message: "You are forlorn, no powers here" });
