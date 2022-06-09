@@ -1,7 +1,7 @@
 ![MIT](https://img.shields.io/badge/License-MIT-blue)
 
-# Character Builder
-
+<!-- # Character Builder -->
+ <h3 align ="center">Character builder</h3>
 ## Description
 
 Welcome to the Character Builder project!
