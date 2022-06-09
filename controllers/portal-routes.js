@@ -34,10 +34,8 @@ router.get('/', withAuth, (req, res) => {
             "intelligence",
             "wisdom",
             "charisma",
-            "party_id",
-            "user_id",
-            "createdAt",
-            "updatedAt"
+            "user_id","party_id",
+            
         ]
     })
     .then((dbCharacterData) => res.json(dbCharacterData))
