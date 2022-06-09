@@ -1,16 +1,18 @@
 ![MIT](https://img.shields.io/badge/License-MIT-blue)
 
-# Character Builder
 
-## Description
-
+<div align ="center">
+<!-- # Character Builder -->
+ <h3 align ="center">Character builder</h3>
+<!-- ## Description -->
+<p align = "center">
 Welcome to the Character Builder project!
 
 A web application that allows a user to create a character, build basic statistics, and create or join a party.
 
 You may visit the deployed [website](?) to try it out for yourself!
-
-## Table of Contents
+<br />
+<!-- ## Table of Contents -->
 
 - [Character Builder](#character-builder)
   - [Description](#description)
@@ -26,7 +28,7 @@ You may visit the deployed [website](?) to try it out for yourself!
   - [Questions](#questions)
   - [License](#license)
 
-## User Story
+<!-- ## User Story -->
 
 ```
 AS A user logged in to an RPG website
@@ -34,7 +36,7 @@ I WANT to create a character and generate statistics
 SO THAT I can create or join a party with other characters
 ```
 
-## Acceptance Criteria
+<!-- ## Acceptance Criteria -->
 
 ```
 GIVEN
@@ -70,12 +72,12 @@ THEN
 THEN
 ```
 
-## Mock-up
+<!-- ## Mock-up -->
 
 The first animation shows GET routes to return all categories, all products, and all tags being tested in Insomnia:
 ![mockup](./public/assets/images/image.png)
 
-## Technologies
+<!-- ## Technologies -->
 
 | ID # | Technologies                      |
 | ---- | --------------------------------- |
@@ -95,23 +97,23 @@ The first animation shows GET routes to return all categories, all products, and
 | 14   | jest package                      |
 | 15   | tailwindcss package               |
 
-## Installation
+<!-- ## Installation -->
 
 VSCode
 
-## Usage
+<!-- ## Usage -->
 
 Usage
 
-## Contributing
+<!-- ## Contributing -->
 
 Contribute
 
-## Tests
+<!-- ## Tests -->
 
 Test
 
-## Questions
+<!-- ## Questions -->
 
 If you have any questions, you may direct them to VMLujanJr using the following links:
 
@@ -136,7 +138,7 @@ If you have any questions, you may direct them to VMLujanJr using the following 
 | E-mail     | <michaeltulmen@gmail.com>            |
 | GitHub     | <https://github.com/Michael-Tulmen/> |
 
-## License
+<!-- ## License -->
 
 MIT License
 
