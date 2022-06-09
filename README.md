@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 ![MIT](https://img.shields.io/badge/License-MIT-blue)
 
 
@@ -14,7 +16,7 @@ You may visit the deployed [website](?) to try it out for yourself!
 <br />
 <!-- ## Table of Contents -->
 
-- [Character Builder](#character-builder)
+<!-- - [Character Builder](#character-builder)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [User Story](#user-story)
@@ -26,9 +28,29 @@ You may visit the deployed [website](?) to try it out for yourself!
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
-  - [License](#license)
+  - [License](#license) -->
 
-<!-- ## User Story -->
+  <details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#character-builder">Character Builder</a>
+    </li>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#user-story">User Story</a></li>
+    <li><a href="#acceptance-criteria">Acceptance Criteria</a></li>
+    <li><a href="mock-up">Mock Up</a></li>
+    <li><a href="#technologies">Technologies</a></li>
+    <li><a href="#installiation">Installiation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#test">Test</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#questions">Questions</a></li>
+  </ol>
+</details>
+
+## User Story
 
 ```
 AS A user logged in to an RPG website
@@ -36,7 +58,7 @@ I WANT to create a character and generate statistics
 SO THAT I can create or join a party with other characters
 ```
 
-<!-- ## Acceptance Criteria -->
+## Acceptance Criteria
 
 ```
 GIVEN
@@ -72,12 +94,12 @@ THEN
 THEN
 ```
 
-<!-- ## Mock-up -->
+## Mock-up
 
 The first animation shows GET routes to return all categories, all products, and all tags being tested in Insomnia:
 ![mockup](./public/assets/images/image.png)
 
-<!-- ## Technologies -->
+## Technologies
 
 | ID # | Technologies                      |
 | ---- | --------------------------------- |
@@ -97,39 +119,49 @@ The first animation shows GET routes to return all categories, all products, and
 | 14   | jest package                      |
 | 15   | tailwindcss package               |
 
-<!-- ## Installation -->
+<p align = "right">
+
+## Installation
 
 VSCode
 
-<!-- ## Usage -->
+<p align = "right">
+
+## Usage
 
 Usage
 
-<!-- ## Contributing -->
+<p align = "right">
+
+## Contributing
 
 Contribute
 
-<!-- ## Tests -->
+<p align = "right">
+
+## Tests
 
 Test
 
-<!-- ## Questions -->
+<p align = "right">
+
+## Questions
 
 If you have any questions, you may direct them to VMLujanJr using the following links:
 
-|            | Description                     |
-| ---------- | ------------------------------- |
-| Name       | Victor                          |
-| Occupation | Developer                       |
-| E-mail     | <vmlujanjr@outlook.com>         |
-| GitHub     | <https://github.com/VMLujanJr/> |
+|            | Description                          |
+| ---------- | -------------------------------      |
+| Name       | Victor                               |
+| Occupation | Developer                            |
+| E-mail     | <vmlujanjr@outlook.com>              |
+| GitHub     | <https://github.com/VMLujanJr/>      |
 
-|            | Description                    |
-| ---------- | ------------------------------ |
-| Name       | Keith                          |
-| Occupation | Developer                      |
-| E-mail     | <keithvip@gmail.com>           |
-| GitHub     | <https://github.com/KeithVIP/> |
+|            | Description                          |
+| ---------- | ------------------------------       |
+| Name       | Keith                                |
+| Occupation | Developer                            |
+| E-mail     | <keithvip@gmail.com>                 |
+| GitHub     | <https://github.com/KeithVIP/>       |
 
 |            | Description                          |
 | ---------- | ------------------------------------ |
@@ -138,7 +170,16 @@ If you have any questions, you may direct them to VMLujanJr using the following 
 | E-mail     | <michaeltulmen@gmail.com>            |
 | GitHub     | <https://github.com/Michael-Tulmen/> |
 
-<!-- ## License -->
+|            | Description                          |
+| ---------- | ------------------------------------ |
+| Name       | Farhan                               |
+| Occupation | Developer                            |
+| E-mail     | <farhanhoque764@gmail.com>           |
+| GitHub     | <https://github.com/fheezy/>         |
+
+<p align = "right">
+
+## License
 
 MIT License
 
@@ -165,3 +206,5 @@ SOFTWARE.
 npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/html/output.css --watch
 
 test
+
+<p align = "right">(<a href="#top">back to top</a>)</p>
