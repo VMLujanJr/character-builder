@@ -39,7 +39,11 @@
                 <form class="flex flex-col items-center gap-1">
                     <div>
                         <!-- <label for="char_name">Character Name:</label> -->
-                        <input class="font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="Character Name" name="char_name" id="char_name" />
+                        <input class="font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="Character Name" name="pc_name" id="pc_name" />
+                    </div>
+                    <div>
+                        <!-- <label for="char_name">Character Name:</label> -->
+                        <input class="font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="Race" name="race" id="race" />
                     </div>
                     <div>
                         <!-- <label for="char_str">Strength:</label> -->
@@ -73,10 +77,20 @@
             <div class="w-1/2">
                 <h2 class="flex justify-center sedgewick text-3xl">Characters</h2>
                 <ol class="flex flex-col items-center gap-1">
-                    <li class="flex w-full text-center">
-                        <p class="w-2/4">Character 1</p>
-                        <button class="w-1/4" type="button">edit</button>
-                        <button class="w-1/4" type="button">delete</button>
+                    <li class="flex flex-col w-full text-center">
+                        <div class="flex w-full text-center">
+                            <p class="w-2/4">Character 1</p>
+                            <button class="w-1/4" type="button">edit</button>
+                            <button class="w-1/4" type="button">delete</button>
+                        </div>
+                        <div class="w-full bg-slate-600">
+                            <input class="w-12 h-12 font-bold text-center outline outline-1 caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="STR" name="edit_str" id="edit_str" />
+                            <input class="w-12 h-12 font-bold text-center outline outline-1 caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="DEX" name="edit_dex" id="edit_dex" />
+                            <input class="w-12 h-12 font-bold text-center outline outline-1 caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="CON" name="edit_con" id="edit_con" />
+                            <input class="w-12 h-12 font-bold text-center outline outline-1 caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="INT" name="edit_int" id="edit_int" />
+                            <input class="w-12 h-12 font-bold text-center outline outline-1 caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="WIS" name="edit_wis" id="edit_wis" />
+                            <input class="w-12 h-12 font-bold text-center outline outline-1 caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="CHA" name="edit_cha" id="edit_cha" />
+                        </div>
                     </li>
                     <li class="flex w-full text-center">
                         <p class="w-2/4">Character 2</p>

@@ -1,26 +1,29 @@
 {{!-- LOGIN PAGE --}}
 
-<section class="flex justify-end">
-    <audio controls autoplay="1" muted="1" loop>
-        <source src="/assets/audio/blood.mp3" type="audio/mpeg" />
-    </audio>
-</section>
-<section class="flex flex-col items-center">
-    <section class="w-1/2 sedgewick text-center my-5">
-        <h2 class="text-6xl my-2 p-2">Login</h2>
-        <p class="cardo">To sign-in, please enter your e-mail and password.</p>
+<div class="h-screen cardo">
+    <section class="flex justify-end">
+        <audio controls autoplay="1" muted="1" loop>
+            <source src="/assets/audio/blood.mp3" type="audio/mpeg" />
+        </audio>
     </section>
+    <section class="flex flex-col items-center">
+        <section class="w-1/2 sedgewick text-center my-5">
+            <h2 class="text-6xl my-2 p-2">Login</h2>
+            <p class="cardo">To sign-in, please enter your e-mail and password.</p>
+        </section>
 
-    <!-- [ SIGN-UP FORM ] -->
-    <form class="flex flex-col drop-shadow-lg bg-slate-900 gap-1 m-5 p-1 rounded-md w-2/3 items-center" id="login">
-        <div class="flex flex-col w-3/4">
-            <label class="text-slate-100" for="login-email">E-mail:</label>
-            <input class="rounded-md" placeholder=" email" type="text" name="login-email" id="login-email" />
-        </div>
-        <div class="flex flex-col w-3/4">
-            <label class="text-slate-100" for="login-password">Password:</label>
-            <input class="rounded-md" placeholder=" password" type="password" name="login-password" id="login-password" />
-        </div>
-        <button class="bg-red-600 rounded-md p-1 m-2 w-3/4" type="submit">login</button>
-    </form>
-</section>
+        <!-- [ SIGN-UP FORM ] -->
+        <form class="flex flex-col drop-shadow-lg bg-slate-900 gap-1 m-5 p-1 rounded-md w-2/3 items-center" id="login">
+            <div class="flex flex-col w-3/4">
+                <label class="text-slate-100" for="login-email">E-mail:</label>
+                <input class="rounded-md" placeholder=" email" type="text" name="login-email" id="login-email" />
+            </div>
+            <div class="flex flex-col w-3/4">
+                <label class="text-slate-100" for="login-password">Password:</label>
+                <input class="rounded-md" placeholder=" password" type="password" name="login-password" id="login-password" />
+            </div>
+            <button class="bg-red-600 rounded-md p-1 m-2 w-3/4" type="submit">login</button>
+        </form>
+    </section>
+</div>
+<script src="/assets/js/login.js"></script>

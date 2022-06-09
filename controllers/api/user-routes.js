@@ -60,11 +60,13 @@ router.post("/", (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
-    .then((dbUserData) => res.json(dbUserData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  .then(dbUserData => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      res.json(dbUserData);
+  });
 });
 
 // (POST LOGIN) /api/users/login
@@ -73,20 +75,40 @@ router.post("/login", (req, res) => {
     where: {
       email: req.body.email,
     },
-  }).then((dbUserData) => {
+  })
+  .then((dbUserData) => {
     if (!dbUserData) {
       res.status(400).json({ message: "No slayer with that email address!" });
       return;
     }
-    const validPassword = dbUserData.checkPassword(req.body.checkPassword);
+      const validPassword = dbUserData.checkPassword(req.body.password);
+      
+      if (!validPassword) {
+        res.status(400).json({ message: "Invalid Password !" });
+        return;
+      }
 
-    if (!validPassword) {
-      res.status(400).json({ message: "Invalid Password !" });
-      return;
-    }
+      req.session.save(() => {
+        // declare session variables
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
 
-    res.json({ user: dbUserData, message: "Slay away !" });
+      res.json({ user: dbUserData, message: "Slay away !" });
+    });
   });
+});
+
+// logout
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+      req.session.destroy(() => {
+          res.status(204).end();
+      });
+  }
+  else {
+      res.status(404).end();
+  }
 });
 
 // (PUT USER BY ID) /api/users/:id
@@ -129,4 +151,5 @@ router.delete("/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+
 module.exports = router;
