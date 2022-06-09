@@ -34,8 +34,8 @@ router.get('/', withAuth, (req, res) => {
             "intelligence",
             "wisdom",
             "charisma",
-            "user_id","party_id",
-            
+            "user_id",
+            "party_id"
         ]
     })
     .then((dbCharacterData) => res.json(dbCharacterData))
@@ -53,7 +53,7 @@ router.get('/', withAuth, (req, res) => {
             "party_name"
         ]
     })
-    .then((dbCharacterData) => res.json(dbCharacterData))
+    .then((dbPartyData) => res.json(dbPartyData))
     .catch((err) => {
         console.log(err);
         res.status(500).json(err);
