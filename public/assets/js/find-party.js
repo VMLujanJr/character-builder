@@ -13,7 +13,7 @@ async function createPartyFormHandler (event) {
         });
         
         if (response.ok) {
-            document.location.replace('/portal');
+            document.location.reload();
         }
         else {
             alert(response.statusText);

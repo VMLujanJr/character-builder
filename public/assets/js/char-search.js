@@ -1,12 +1,10 @@
-// NOT DONE
-
-async function createPartyFormHandler (event) {
+/* async function createPcFormHandler (event) {
     event.preventDefault();
 
-    const party_name = document.querySelector('#party-name').value.trim(); 
+    const pc_name = document.querySelector('#party-name').value.trim(); 
     
-    if (party_name) {
-        const response = await fetch('/api/party', {
+    if (pc_name) {
+        const response = await fetch('/api/player_characters', {
             method: 'post',
             body: JSON.stringify({
                 party_name
@@ -15,7 +13,7 @@ async function createPartyFormHandler (event) {
         });
         
         if (response.ok) {
-            document.location.replace('/portal');
+            document.location.reload();
         }
         else {
             alert(response.statusText);
@@ -23,4 +21,4 @@ async function createPartyFormHandler (event) {
     };
 }
 
-document.querySelector('#create-party-form').addEventListener('submit', createPartyFormHandler);
+document.querySelector('#list-of-pcs').addEventListener('button', searchPcFormHandler); */

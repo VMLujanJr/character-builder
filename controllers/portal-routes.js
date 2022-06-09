@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth.js');
 /* NOTE: Once you sign-up, you should immediately be sent to the login page or portal page? */
 
 // [ http://localhost:3001/portal ]
-router.get('/', (req, res) => { // ...test
+/* router.get('/', (req, res) => { // ...test
     res.render('portal', { // handlebars extension is implied
         id: 1,
         post_url: 'https://handlebarsjs.com/guide/',
@@ -19,10 +19,10 @@ router.get('/', (req, res) => { // ...test
             username: 'test_user'
         }
     });
-});
+}); */
 
-// FIND ALL CHARACTERS
-router.get('/', withAuth, (req, res) => {
+// [ http://localhost:3001/portal ] // REPLACE TOP
+router.get('/', (req, res) => {
     PlayerCharacter.findAll({
         attributes: [
             "id",
@@ -34,15 +34,17 @@ router.get('/', withAuth, (req, res) => {
             "intelligence",
             "wisdom",
             "charisma",
-            "user_id",
-            "party_id"
+/*             "user_id",
+            "party_id" */
         ]
     })
-    .then((dbCharacterData) => res.json(dbCharacterData))
-    .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+    .then(dbCharacterData => {
+        const pcs = dbCharacterData.map(pc => pc.get({ plain: true}));
+        res.render('portal', {
+            pcs,
+            loggedIn: req.session.loggedIn
+        })
+    })
 });
 
 // FIND ALL PARTIES
