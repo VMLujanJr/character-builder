@@ -1,8 +1,7 @@
 async function createPCFormHandler (event) {
     event.preventdefault();
 
-
-    const pc_name= document.querySelector('#char_name').value.trim();
+    const name= document.querySelector('#char_name').value.trim();
     const race = document.querySelector('#char_race').value.trim();
     const strength = document.querySelector('#char_str').value.trim();
     const dexterity = document.querySelector('#char_dex').value.trim();
@@ -10,25 +9,11 @@ async function createPCFormHandler (event) {
     const intelligence = document.querySelector('#char_int').value.trim();
     const wisdom = document.querySelector('#char_wis').value.trim();
     const charisma = document.querySelector('#char_cha').value.trim();
-    const party_id = 1;
-    const user_id = 1; // 11
-    // const jsessionId = '${cookie.JSESSIONID.value}';  ??
     
-    if(pc_name && race && strength && dexterity && constitution && intelligence && wisdom && charisma && party_id && user_id) {
+    if(name) {
     const response = await fetch('/api/player_characters', {
         method: 'post',
-        body: JSON.stringify({
-            pc_name,
-            race,
-            strength,
-            dexterity,
-            constitution,
-            intelligence,
-            wisdom,
-            charisma,
-            party_id,
-            user_id // 11
-        }),
+        body: JSON.stringify({ name, race, strength, dexterity, constitution, intelligence, wisdom, charisma }),
         headers: {
             'Content-Type': 'application/json'
         }
@@ -40,6 +25,6 @@ async function createPCFormHandler (event) {
     else {
         alert(response.statusText);
     }
-    }
-};
+    };
+}
 document.querySelector('#create-pc-form').addEventListener('submit', createPCFormHandler);

@@ -24,11 +24,8 @@ router.get('/', (req, res) => { // ...test
 // FIND ALL CHARACTERS
 router.get('/', withAuth, (req, res) => {
     PlayerCharacter.findAll({
-        where: {
-            user_id: req.session.user_id
-        },
         attributes: [
-            // "character_id", 
+            "id",
             "pc_name",
             "race",
             "strength",
@@ -36,7 +33,11 @@ router.get('/', withAuth, (req, res) => {
             "constitution",
             "intelligence",
             "wisdom",
-            "charisma"
+            "charisma",
+            "party_id",
+            "user_id",
+            "createdAt",
+            "updatedAt"
         ]
     })
     .then((dbCharacterData) => res.json(dbCharacterData))
@@ -46,22 +47,12 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-// FIND ALL CHARACTERS
+// FIND ALL PARTIES
 router.get('/', withAuth, (req, res) => {
     Party.findAll({
-        where: {
-            user_id: req.session.user_id
-        },
         attributes: [
-            // "character_id", 
-            "pc_name",
-            "race",
-            "strength",
-            "dexterity",
-            "constitution",
-            "intelligence",
-            "wisdom",
-            "charisma"
+            "id",
+            "party_name"
         ]
     })
     .then((dbCharacterData) => res.json(dbCharacterData))
