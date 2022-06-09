@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Character } = require("../../models");
+const { User, PlayerCharacter } = require("../../models");
 
 // (GET ALL) /api/users
 router.get("/", (req, res) => {
@@ -22,12 +22,17 @@ router.get("/:id", (req, res) => {
     },
     include: [
       {
-        model: Character,
+        model: PlayerCharacter,
         attributes: [
           "id",
-          "character_name",
+          "pc_name",
           "race",
-          "statistic_id",
+          "strength",
+          "dexterity",
+          "constitution",
+          "intelligence",
+          "wisdom",
+          "charisma",
           "party_id"
         ],
       },

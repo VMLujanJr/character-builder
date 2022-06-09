@@ -1,22 +1,24 @@
-// import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
-// import our database connection from config.js
 const sequelize = require('../config/connection.js');
-const Character = require('./Character.js');
-const User = require('./User.js');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
-class Statistic extends Model {}
+class PlayerCharacter extends Model {}
 
-// set up fields and rules for Product model
-Statistic.init(
+PlayerCharacter.init(
     {
-        // define columns
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+        },
+        pc_name: {
+            type: DataTypes.STRING(30),
+            allowNull: false,
+            unique: true,
+        },
+        race: {
+            type: DataTypes.STRING(30),
+            allowNull: false,
         },
         strength: {
             type: DataTypes.INTEGER,
@@ -59,14 +61,30 @@ Statistic.init(
             validate: {
                 isNumeric: true
             }
+        },
+        party_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'party',
+                key: 'id',
+            },
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
         }
     },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'statistic',
+        modelName: 'playercharacter',
     }
 );
 
-module.exports = Statistic;
+module.exports = PlayerCharacter;

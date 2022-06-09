@@ -1,8 +1,7 @@
 //functions building the seeding pattern
 const seedUsers = require("./user-seeds.js");
 const seedParties = require("./party-seeds.js");
-const seedStatistics = require("./statistic-seeds.js");
-const seedCharacters = require("./character-seeds.js");
+const seedpCharacter = require("./playercharacter-seeds.js");
 
 const sequelize = require("../config/connection.js");
 
@@ -18,11 +17,8 @@ const seedAll = async () => {
   await seedParties();
   console.log("\n----- PARTIES SEEDED -----\n");
 
-  await seedStatistics();
-  console.log("\n----- STATISTICS SEEDED -----\n");
-
-  await seedCharacters();
-  console.log("\n----- CHARACTERS SEEDED -----\n");
+  await seedpCharacter();
+  console.log("\n----- PLAYER CHARACTERS SEEDED -----\n");
 
   process.exit(0);
 };

@@ -3,19 +3,19 @@ const { Party } = require('../models');
 const partyData = [
     {
         id: 1,
-        party_name: 'Victor',
+        party_name: 'Escabar',
     },
     {
         id: 2,
-        party_name: 'Michael',
+        party_name: 'Excaliber',
     },
     {
         id: 3,
-        party_name: 'Keith',
+        party_name: 'DeathSic',
     },
     {
         id: 4,
-        party_name: 'Barney',
+        party_name: 'Barney\'s Workshop',
     },
     {
         id: 5,

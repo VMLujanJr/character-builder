@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const sequelize = require("../../config/connection");
-const { Character, User, Statistic, Party } = require("../../models");
+const { PlayerCharacter, User, Party } = require("../../models");
 
 //GET ALL characters
 router.get("/", (req, res) => {
-    Character.findAll()
+    PlayerCharacter.findAll()
     .then((dbCharacterData) => res.json(dbCharacterData))
     .catch((err) => {
         console.log(err);
@@ -14,23 +14,19 @@ router.get("/", (req, res) => {
 
 //GET BY ID character 
 router.get("/:id", (req,res) => {
-    Character.findOne({
+    PlayerCharacter.findOne({
         attributes: { exclude: ['password'] },
         where: {
             id: req.params.id
         },
         include: [
             {
-                model: User,
-                attributes: ['username', 'email',]
-            },
-            {
-                model: Statistic,
-                attributes: ['id', 'strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']
-            },
-            {
                 model: Party,
                 attributes: ['id', 'party_name']
+            },
+            {
+                model: User,
+                attributes: ['username', 'email',]
             }
         ]
     })
@@ -48,11 +44,16 @@ router.get("/:id", (req,res) => {
 });
 
 router.post("/", (req, res) => {
-    Character.create({
+    PlayerCharacter.create({
         id: req.body.id,
-        character_name: req.body.character_name,
+        pc_name: req.body.pc_name,
         race: req.body.race,
-        statistic_id: req.body.statistic_id,
+        strength: req.body.strength,
+        dexterity: req.body.dexterity,
+        constitution: req.body.constitution,
+        intelligence: req.body.intelligence,
+        wisdom: req.body.wisdom,
+        charisma: req.body.charisma,
         party_id: req.body.party_id,
         user_id: req.body.user_id
     })
@@ -64,13 +65,19 @@ router.post("/", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-    Character.update(
+    PlayerCharacter.update(
         {
         id: req.body.id,
-        character_name: req.body.character_name,
+        pc_name: req.body.pc_name,
         race: req.body.race,
-        statistic_id: req.body.statistic_id,
-        party_id: req.body.party_id
+        strength: req.body.strength,
+        dexterity: req.body.dexterity,
+        constitution: req.body.constitution,
+        intelligence: req.body.intelligence,
+        wisdom: req.body.wisdom,
+        charisma: req.body.charisma,
+        party_id: req.body.party_id,
+        user_id: req.body.user_id
         },
         {
             where: {
@@ -92,7 +99,7 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-    Character.destroy({
+    PlayerCharacter.destroy({
         where: {
             id: req.params.id,
         },
