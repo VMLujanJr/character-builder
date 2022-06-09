@@ -31,15 +31,24 @@ router.get('/', (req, res) => {
             "strength",
             "dexterity",
             "constitution",
-            "intelligence",
             "wisdom",
             "charisma",
-/*             "user_id",
-            "party_id" */
+            "party_id",
+            "user_id"
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['id']
+            },
+            {
+                model: Party,
+                attributes: ['id']
+            }
         ]
     })
     .then(dbCharacterData => {
-        const pcs = dbCharacterData.map(pc => pc.get({ plain: true}));
+        const pcs = dbCharacterData.map(pc => pc.get({ plain: true }));
         res.render('portal', {
             pcs,
             loggedIn: req.session.loggedIn
