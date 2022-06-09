@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection.js');
-const { User, Character, Party, Statistic } = require('../models');
+const { User, PlayerCharacter, Party } = require('../models');
 const router = require('express').Router();
 
 // [ http://localhost:3001/ ]
@@ -10,6 +10,7 @@ router.get('/', (req, res) => { // ...test
         title: 'Handlebars Docs',
         created_at: new Date(),
         vote_count: 10,
+        loggedIn: req.session.loggedIn,
         comments: [{}, {}],
         user: {
             username: 'test_user'

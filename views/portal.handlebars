@@ -9,10 +9,14 @@
     <!-- [ CREATE A CHARACTER ] -->
     <div class="w-1/2">
         <h2 class="flex justify-center sedgewick text-3xl">Create Character</h2>
-        <form class="flex flex-col items-center gap-1">
+        <form class="flex flex-col items-center gap-1" id="create-pc-form">
             <div>
                 <!-- <label for="char_name">Character Name:</label> -->
                 <input class="font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="Character Name" name="char_name" id="char_name" />
+            </div>
+            <div>
+                <!-- <label for="char_race">Character Race:</label> -->
+                <input class="font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="Race" name="char_race" id="char_race" />
             </div>
             <div>
                 <!-- <label for="char_str">Strength:</label> -->
@@ -28,7 +32,7 @@
             </div>
             <div>
                 <!-- <label for="char_int">Intelligence:</label> -->
-                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="INT" name="char_dex" id="char_dex" />
+                <input class="w-12 h-12 font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="INT" name="char_int" id="char_int" />
             </div>
             <div>
                 <!-- <label for="char_wis">Wisdom:</label> -->
@@ -43,6 +47,7 @@
     </div>
     
     <!-- [ LIST OF CHARACTERS ] -->
+
     <div class="w-1/2">
         <h2 class="flex justify-center sedgewick text-3xl">Characters</h2>
         <ol class="flex flex-col items-center gap-1">
@@ -110,7 +115,7 @@
     <!-- [ CREATE PARTY] -->
     <div class="flex flex-col w-1/2 items-center gap-1">
         <h2 class="sedgewick text-3xl">Create Party</h2>
-        <form class="flex flex-col">
+        <form class="flex flex-col" id="create-party-form">
             <div>
                 <!-- <label for="party-name">Party Name:</label> -->
                 <input class="w-32 text-center" placeholder="Party Name" name="party-name" id="party-name" />
@@ -154,3 +159,7 @@
         </ol>
     </div>
 </section>
+
+<script src="/assets/js/create-pc.js"></script>
+<script src="/assets/js/char-search.js"></script>
+<script src="/assets/js/create-party.js"></script>
