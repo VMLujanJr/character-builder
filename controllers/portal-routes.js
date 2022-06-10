@@ -22,7 +22,9 @@ const withAuth = require('../utils/auth.js');
 }); */
 
 // [ http://localhost:3001/portal ] // REPLACE TOP
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
+    console.log("REQUEST SESSION", req.session)
+
     PlayerCharacter.findAll({
         attributes: [
             "id",
@@ -51,6 +53,7 @@ router.get('/', (req, res) => {
         const pcs = dbCharacterData.map(pc => pc.get({ plain: true }));
         res.render('portal', {
             pcs,
+            user_id: req.session.user_id,
             loggedIn: req.session.loggedIn
         })
     })
@@ -58,6 +61,7 @@ router.get('/', (req, res) => {
 
 // FIND ALL PARTIES
 router.get('/', withAuth, (req, res) => {
+    console.log("REQUEST SESSION", req.session)
     Party.findAll({
         attributes: [
             "id",

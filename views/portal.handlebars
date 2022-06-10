@@ -10,6 +10,7 @@
     <div class="w-1/2">
         <h2 class="flex justify-center sedgewick text-3xl">Create Character</h2>
         <form class="flex flex-col items-center gap-1" id="create-pc-form">
+            <input type="hidden" name="user_id" id="user_id" value="{{user_id}}">
             <div>
                 <!-- <label for="char_name">Character Name:</label> -->
                 <input class="font-bold text-center outline outline-1 rounded-full caret-red-900 focus:outline-blue-700 focus:outline-2 focus:animate-pulse" placeholder="Character Name" name="char_name" id="char_name" />
